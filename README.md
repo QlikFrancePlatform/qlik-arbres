@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
-This project propose a mashup Qlik with embed (webcomponent). The use case is a frensh website around a trees in Paris. It's interesting to positionning trees and School with a tempature zone.
+This project propose a mashup Qlik with embed (webcomponent). The use case is a french website around a trees in Paris. It's interesting to positionning trees and School with a tempature zone.
 
 This example proposes easy to complex mashup integrations.
 
