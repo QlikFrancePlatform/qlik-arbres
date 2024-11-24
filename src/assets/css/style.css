@@ -1,0 +1,930 @@
+/* @import '~@csstools/normalize.css'; */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    color: #333;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    background: white;
+    margin: 20px 0;
+}
+
+.header {
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 184%;
+    display: flex;
+    align-items: center; /** Y-axis align **/
+    justify-content: center; /** X-axis align **/
+    color: white;
+    font-size: 7rem;
+}
+
+.classic-app {
+    height: 800px;
+    width: 1200px;
+    border: 1px solid #bbb;
+    flex-grow: 1;
+    border-radius: 3px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+}
+
+/* .viz {
+    width: 600px;
+    height: 600px;
+    padding: 16px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    position:relative;
+    margin-bottom: 15px;
+} */
+
+/* Parallax */
+
+.parallax, 
+.parallax_0, 
+.parallax_1, 
+.parallax_2,
+.parallax_2b,
+.parallax_5,
+.parallax_6 {
+    background-attachment: fixed;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax_3,
+.parallax_4 {
+    position: relative;
+}
+
+.parallax {
+    background-image: url('../img/arbres.jpg');
+}
+
+.parallax_1 {
+    background-image: url('../img/arbres_1.jpg');
+}
+
+.parallax_2 {
+    background-image: url('../img/arbres_2.jpg');
+}
+
+.parallax_2b {
+    background-image: url('../img/arbres_2b.jpg');
+}
+
+.parallax_4 {
+    background-image: url('../img/ecole.jpg');
+}
+
+.parallax_5 {
+    background-image: url('../img/ecole_2.jpg');
+}
+
+.parallax-inner {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+    height: calc(50vh - 80px);
+}
+
+.parallax-inner_1 {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    width: calc(150vh - 80px);
+    height: calc(90vh - 80px);
+}
+
+.parallax-inner_2 {
+    position: relative;
+    margin: 0 auto;
+    padding: 100px;
+    text-align: center;
+    width: calc(200vh - 80px);
+    height: calc(90vh - 80px);
+}
+
+.parallax-inner_2b {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    width: calc(150vh - 80px);
+    height: calc(90vh - 80px);
+}
+
+.parallax-inner_3 {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    margin: 20px;
+    height: calc(105vh - 80px);
+}
+
+.parallax-inner_4 {
+    position: relative;
+    padding: 86px 200px;
+    text-align: center;
+    color: #ffffff;
+    height: calc(90vh - 80px);
+}
+
+.parallax-inner_5 {
+    position: relative;
+    padding: 20px 200px;
+    text-align: center;
+    color: #ffffff;
+    height: calc(90vh - 80px);
+    font-size: 2em;
+}
+
+.parallax-inner_6 {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    height: calc(110vh - 80px);
+}
+
+/* Grid */
+
+.wrapper {
+    height: calc(100vh - 80px);
+    z-index: 89;
+    overflow: hidden;
+    position: relative;
+}
+
+.right {
+    height: 500px;
+    width: 1250px !important;
+}
+
+.right-text {
+    position: absolute;
+    top: 20px;
+    left: 650px;
+    height: 20px;
+    width: 60% !important;
+}
+
+.right {
+    position: absolute;
+    left: 425px;
+    top: -56px;
+    z-index: 99;
+}
+
+.left {
+    width: 655px;
+    height: 285px;
+    float: left;
+    z-index: 92;
+    position: relative;
+}
+
+.wrapper-noobject {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    margin: 0 70px;
+    width: 60%;
+}
+
+.wrapper-noobject div.one {
+    width: 150%;
+    transform: translate(4px) rotate(4deg) translateY(4px);
+}
+
+.wrapper-noobject div.two {
+    width: 265%;
+    transform: translate(4px) rotate(4deg) translateY(4px);
+}
+
+/* Style des textes */
+
+.parallax-inner .text {
+    position: absolute;
+    top: 300px;
+    width: auto;
+}
+
+.parallax-inner_3 .text {
+    z-index: 99;
+    position: absolute;
+    top: 15px;
+    left: 320px;
+    background-color: #2ea44f !important;
+    color: #ffffff;
+}
+
+.parallax-inner_4 .text {
+    position: absolute;
+    width: 300px;
+    text-align: left;
+    top: 20px;
+    left: 1185px;
+    background-color: #2ea44f !important;
+    color: #ffffff;
+    /* border: 8px #333 solid; */
+}
+
+.parallax-inner_5 .text {
+    font-size: 1em;
+}
+
+.parallax-inner_5 .text,
+.parallax-inner_6 .text {
+    z-index: 0;
+    background-color: #2ea44f !important;
+    color: #ffffff;
+    opacity: 0.8;    
+}
+
+.text-option {
+    font-size: 2em;
+    list-style: circle;
+    text-align: left;
+    background-color: #333 !important;
+    color: #ffffff;
+    width: 50%;
+    opacity: 0.8;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.text-option li {
+    padding-bottom: 0.8em;
+}
+
+.text {
+    font-size: 2em;
+    color: #333;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    padding: 15px;
+    margin: 25px 50px;
+    border-radius: 15px !important;
+}
+
+a {
+    color: #333;
+}
+
+.text-option a {
+    color: #2ea44f;
+}
+
+/* Style color objects  */
+
+#chart-advisor {
+    width: 100%;
+    height: calc(55vh - 80px);
+}
+
+.css-1xa75id {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 15px !important;
+}
+
+.sn-kpi-value-wrapper .sn-kpi-ellips-text {
+    color: #83af9b;
+}
+
+.sn-kpi-secondary-wrapper .sn-kpi-ellips-text {
+    color: black !important;
+}
+
+.parallax-inner_4 h2 {
+    font-size: 2em;
+    color: #000000;
+    padding-bottom: 5px;
+}
+
+.kpi {
+    font-size: 5em;
+    color: green;
+}
+
+label {
+    color: #000000;
+    display: block;
+}
+
+.advisor {
+    box-sizing: border-box;
+    margin-bottom: 2em;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    height: 870px;
+}
+
+.advisor label {
+    margin-bottom: 20px;
+    /* height: calc(100vh - 80px); */
+}
+
+.advisor input,
+.advisor select {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 60%;
+    font-size: 0.8em;
+}
+
+.chart-advisor {
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 4px solid hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 100%);    
+}
+
+.button {
+    background-color: #2ea44f;
+    color: #fff;
+}
+
+.close {
+    background-color: #ffffff;
+    color: #2ea44f;
+}
+
+.button,
+.close {
+  appearance: none;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 0.8em;
+  padding: 25px 100px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2c974b;
+}
+
+.button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+.scroll-prompt {
+  position: absolute;
+  z-index: 998;
+  bottom: 35px;
+  left: 90%;
+  margin-left: -80px;
+  width: 160px;
+  height: 135px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.scroll-prompt .scroll-prompt-arrow-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -18px;
+    opacity: 0.5;
+    -webkit-animation-name: bounce;
+        animation-name: bounce;
+    -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+}
+.scroll-prompt .scroll-prompt-arrow {
+-webkit-animation-name: opacity;
+        animation-name: opacity;
+-webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+-webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+}
+.scroll-prompt .scroll-prompt-arrow:last-child {
+  animation-direction: reverse;
+  margin-top: -6px;
+}
+.scroll-prompt .scroll-prompt-arrow > div {
+  width: 36px;
+  height: 36px;
+  border-right: 8px solid #298e46;
+  border-bottom: 8px solid #298e46;
+  transform: rotate(45deg) translateZ(1px);
+}
+
+@-webkit-keyframes opacity {
+0% {
+    opacity: 0;
+}
+10% {
+    opacity: 0.1;
+}
+20% {
+    opacity: 0.2;
+}
+30% {
+    opacity: 0.3;
+}
+40% {
+    opacity: 0.4;
+}
+50% {
+    opacity: 0.5;
+}
+60% {
+    opacity: 0.6;
+}
+70% {
+    opacity: 0.7;
+}
+80% {
+    opacity: 0.8;
+}
+90% {
+    opacity: 0.9;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@keyframes opacity {
+0% {
+    opacity: 0;
+}
+10% {
+    opacity: 0.1;
+}
+20% {
+    opacity: 0.2;
+}
+30% {
+    opacity: 0.3;
+}
+40% {
+    opacity: 0.4;
+}
+50% {
+    opacity: 0.5;
+}
+60% {
+    opacity: 0.6;
+}
+70% {
+    opacity: 0.7;
+}
+80% {
+    opacity: 0.8;
+}
+90% {
+    opacity: 0.9;
+}
+100% {
+    opacity: 1;
+}
+}
+@-webkit-keyframes bounce {
+0% {
+    transform: translateY(0);
+}
+10% {
+    transform: translateY(3px);
+}
+20% {
+    transform: translateY(6px);
+}
+30% {
+    transform: translateY(9px);
+}
+40% {
+    transform: translateY(12px);
+}
+50% {
+    transform: translateY(15px);
+}
+60% {
+    transform: translateY(18px);
+}
+70% {
+    transform: translateY(21px);
+}
+80% {
+    transform: translateY(24px);
+}
+90% {
+    transform: translateY(27px);
+}
+100% {
+    transform: translateY(30px);
+}
+}
+@keyframes bounce {
+0% {
+    transform: translateY(0);
+}
+10% {
+    transform: translateY(3px);
+}
+20% {
+    transform: translateY(6px);
+}
+30% {
+    transform: translateY(9px);
+}
+40% {
+    transform: translateY(12px);
+}
+50% {
+    transform: translateY(15px);
+}
+60% {
+    transform: translateY(18px);
+}
+70% {
+    transform: translateY(21px);
+}
+80% {
+    transform: translateY(24px);
+}
+90% {
+    transform: translateY(27px);
+}
+
+
+100% {
+    transform: translateY(30px);
+}
+}
+  
+.toggle {
+    position: relative;
+    /* border: solid 15px green; */
+    border-radius: 250px;
+    transition: transform cubic-bezier(0, 0, 0.30, 2) .4s;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    background-color: #fff;
+}
+
+.toggle>input[type="radio"] {
+    display: none;
+}
+
+.toggle>#askQuestion:checked~#flap {
+    transform: rotateY(-180deg);
+}
+
+.toggle>#askQuestion:checked~#flap>.content {
+    transform: rotateY(-180deg);
+}
+
+.toggle>#selectMetadata:checked~#flap {
+    transform: rotateY(0deg);
+}
+
+.toggle>label {
+    display: inline-block;
+    min-width: 170px;
+    padding: 30px;
+    text-align: center;
+    color: #2ea44f;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 0.8em;
+}
+
+.toggle>label,
+.toggle>#flap {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.toggle>#flap {
+    position: absolute;
+    top: -4px;
+    left: 49%;
+    height: calc(70% + 8px);
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2ea44f;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    font-size: 0.8em;
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) .5s;
+}
+
+.toggle>#flap>.content {
+    color: #333;
+    transition: transform 0s linear .25s;
+    transform-style: preserve-3d;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.selected {
+    width: 60%;
+}
+
+.speedy {
+    position: relative;
+    animation: Speedy;
+    animation-duration: 2s;
+    animation-iteration-count: 10000;
+    animation-timing-function: ease-in;
+    animation-direction: normal;
+    width: 660px;
+    height: 382px;
+    background: url('../img/speedy-gonzales.png');
+  }
+
+@keyframes Speedy {
+    0%   {left: 0px; top: 0px;}
+    100%  {left: 1200px; top: 0px;}
+}
+
+@media all {
+
+}
+  
+@media (min-width: 720px) {
+    .header {
+        margin: 0 auto;
+    }
+
+    .parallax-inner {
+        border-radius: 15px;
+        width: auto;
+        opacity: 1;
+    }
+
+    .parallax-inner_1 {
+        padding: 200px 415px;
+        width: auto;
+        height: calc(90vh - 350px);
+    }
+
+    .parallax-inner_2 {
+        padding: 100px 115px;
+        border-radius: 15px;
+        width: auto;
+        opacity: 1;
+    }
+
+    .parallax-inner_4 {
+        width: auto;
+        opacity: 1;        
+    }
+
+    .right-text,
+    .right {
+        position: relative;
+        width: 100%;
+    }
+
+    .left {
+        float: none;
+        position: relative;
+    }
+
+    /* .text,
+    .text-option {
+        font-size: .5em;
+    } */
+}
+
+@media (max-width: 719px) {
+    .header {
+        font-size: 2rem;
+    }
+
+    .parallax-inner {
+        border-radius: 15px;
+        width: auto;
+        opacity: 1;
+    }
+
+    .parallax-inner_1 {
+        height: calc(65vh - 80px);
+        padding: 30px 10px;
+        width: auto;
+    }
+
+    .parallax-inner_2 {
+        position: relative;
+        padding: 30px 10px;
+        border-radius: 15px;
+        width: auto;
+    }
+
+    .parallax-inner_3 .text {
+        position: relative !important;
+        top: 0;
+        left: 0;
+    }
+
+    .parallax-inner_3 .sheet {
+        margin-top: 25px;
+        position: relative;
+        height: 330px;
+    }
+
+    .parallax-inner_3 iframe {
+        height: calc(90vh - 80px);
+    }    
+
+    .parallax-inner_4 {
+        padding: 162px 115px;
+    }
+
+    .parallax-inner_4 .text {
+        top: 0;
+        left: 0;       
+        width: 85%; 
+    }
+
+    .parallax-inner_5 {
+        position: relative;
+        text-align: center;
+        color: #ffffff;
+        padding: 30px 10px;
+        height: calc(90vh - 80px);
+    }
+
+    .parallax-inner_5 .text {
+        font-size: 0.8em;        
+    }
+
+    .right-text,
+    .right {
+        position: relative;
+        width: 100% !important;
+        top: 0;
+        left: 0;
+    }
+
+    .left {
+        float: none;
+        position: relative;
+        width: 100%;
+        height: 115px;
+        padding-bottom: 1em;
+        margin-top: 120px;
+    }
+
+    label {
+        font-size: 1em;
+        color: #000000;
+        display: block;
+    }
+    
+    form {
+        box-sizing: border-box;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: hsl(0, 0%, 100%);
+        border: 4px solid hsl(0, 0%, 90%);
+    }
+    
+    .full-width label {
+        margin-bottom: 25px;
+    }
+    
+    .full-width input {
+        font-size: 2em;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    
+    .viz {
+        margin: 40px 0 !important;
+    }
+
+    .wrapper-noobject {
+        display: block;
+        background-color: #fff;
+        border-radius: 15px;
+        margin: 10px -66px;
+        padding: 5px;
+        width: 320px;
+        height: 500px;
+    }
+
+    .wrapper-noobject div.one,
+    .wrapper-noobject div.two {
+        width: 0;
+    }
+
+    .advisor input,
+    .advisor .selected,
+    .advisor .selected option {
+        width: 100%;
+        font-size: .8em;
+    }
+
+    .button,
+    .close {
+        font-size: .8em;
+        padding: 15px 10px;
+    }
+
+    #flap {
+        display: none;
+        visibility: hidden;
+    }
+
+    .toggle > #flap {
+        width: 52%;
+        height: calc(36% + 8px);
+    }
+
+    .toggle > #flap,
+    .toggle > label {
+        font-size: .7em;
+        padding: 2px;
+    }
+
+    .text,
+    .text-option {
+        font-size: 1.5em;
+        margin: 25px 15px
+    }
+
+    .text-option {
+        width: 85%;
+    }
+
+    .speedy {
+        position: relative;
+        left: 40px;
+        animation-duration: 0;
+    }
+
+    @keyframes Speedy {
+        0%   {left: 0px; top: 0px;}
+        100%  {left: 0px; top: 0px;}
+    } 
+    
+    .scroll-prompt {
+        left: 50%;
+    }
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ project_name }}</title>
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script
+    crossorigin="anonymous"
+    type="application/javascript"
+    src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components"
+    data-host="{{ tenant_url }}"
+    data-web-integration-id="{{ webIntegration_id }}"
+    data-cross-site-cookies="true"
+  ></script>
+  <script src="assets/js/script-effect.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="parallax">
+      <div class="parallax-inner">
+        <h1 class="header">Les arbres dans Paris</h1> 
+        <div class="text">
+          <p>Comment utiliser facilement les API de Qlik Sense Cloud pour réaliser des mashup trés rapidement sans effort.</p>
+          <p>A travers ce mashup dédié aux arbres, aux écoles et aux zones de temperatures des arrondissements, nous vous proposons des exemples simples pour 
+          intégrer des indicateurs Qlik Sense dans une page web.</p>
+          <p>Suivez le guide en cliquant sur la fléche en bas à droite de l'écran.</p>
+        </div>
+      </div>
+      <a href="#parallax_1">
+        <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+          <div class="scroll-prompt-arrow-container">
+              <div class="scroll-prompt-arrow"><div></div></div>
+              <div class="scroll-prompt-arrow"><div></div></div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="parallax_1" id="parallax_1">
+      <div class="parallax-inner_1">
+        <qlik-embed
+          class="viz"
+          ui="object"
+          app-id="{{ app_id }}"
+          object-id="HqEwgB"
+        >
+        </qlik-embed>
+        <div class="text">
+          <p>Ici, nous ajoutons un indicateur KPI avec l'aide des <a href="https://qlik.dev/embed/">WebComponents crées par Qlik</a>.</p>
+        </div>
+      </div>
+      <a href="#parallax_2">
+        <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+          <div class="scroll-prompt-arrow-container">
+              <div class="scroll-prompt-arrow"><div></div></div>
+              <div class="scroll-prompt-arrow"><div></div></div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="parallax_2" id="parallax_2">
+      <div class="parallax-inner_2">
+        <div class="wrapper">
+          <div class="right-text">
+            <div class="text">
+              Dans cet exemple, nous ajoutons 2 objets extraits de Qlik Sense.<br />
+              Vous pouvez positionner les objets à votre convenance dans la page.
+            </div>            
+          </div>
+          <div class="left">
+              <qlik-embed
+                  class="viz"
+                  ui="object"
+                  app-id="{{ app_id }}"
+                  object-id="HqEwgB"
+                  >
+              </qlik-embed>   
+          </div>
+          <div class="right">
+              <qlik-embed
+                  class="viz"
+                  ui="object"
+                  app-id="{{ app_id }}"
+                  object-id="50a7edf1-7caa-4584-8557-b371c0ceabf5"
+                  >
+              </qlik-embed> 
+          </div>
+        </div> 
+      </div>  
+      <a href="#parallax_2b">
+        <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+          <div class="scroll-prompt-arrow-container">
+              <div class="scroll-prompt-arrow"><div></div></div>
+              <div class="scroll-prompt-arrow"><div></div></div>
+          </div>
+        </div>
+      </a>
+    </div>    
+
+    <div class="parallax_2b" id="parallax_2b">
+      <div class="parallax-inner_2b">
+        <qlik-embed
+        class="viz"
+        ui="object"
+        app-id="{{ app_id }}"
+        object-id="PUzPH"
+        >
+        </qlik-embed> 
+        <div class="text">
+          <p>Dans cet exemple, nous ajoutons un objet layout-container avec une ouverture de PoP-In..</p>
+        </div>
+      </div>
+      <a href="#parallax_3">
+        <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+          <div class="scroll-prompt-arrow-container">
+              <div class="scroll-prompt-arrow"><div></div></div>
+              <div class="scroll-prompt-arrow"><div></div></div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="parallax_3" id="parallax_3">
+      <div class="parallax-inner_3">
+        <div class="text">
+          Vous pouvez également ajouter une feuille compléte Qlik Sense dans une page web.
+        </div>
+        <div class="sheet">
+          <qlik-embed
+              ui="classic/app"
+              app-id="{{ app_id }}"
+              sheet-id="502471ad-068f-45da-a7fa-816cbba6d15e"
+              >
+          </qlik-embed>
+        </div>
+      </div>
+      <a href="#parallax_4">
+        <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+          <div class="scroll-prompt-arrow-container">
+              <div class="scroll-prompt-arrow"><div></div></div>
+              <div class="scroll-prompt-arrow"><div></div></div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="parallax_4" id="parallax_4">
+      <div class="parallax-inner_4">
+        <div class="text">
+          Utiliser le framework <a href="https://github.com/qlik-oss/enigma.js/">Enigma.js</a>
+          ou <a href="https://qlik.dev/apis/javascript/capability/">l'API Capability</a> pour extrait seulement la <strong>dimension</strong> et la <strong>mesure</strong> dans une page.
+        </div>
+        <div class="wrapper-noobject">
+          <div class="one">
+            <h2>Nombre d'écoles</h2>
+            <div id="ecole" class="kpi"></div>
+          </div>
+          <div class="two">
+            <h2>Nombre d'habitant</h2>
+            <div id="habitant" class="kpi"></div>
+          </div>
+        </div>
+      </div> 
+      <a href="#parallax_5">
+        <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+          <div class="scroll-prompt-arrow-container">
+              <div class="scroll-prompt-arrow"><div></div></div>
+              <div class="scroll-prompt-arrow"><div></div></div>
+          </div>
+        </div>
+      </a> 
+    </div>
+
+    <div class="parallax_5" id="parallax_5">
+      <div class="parallax-inner_5">
+
+          <div class="advisor">
+
+            <div class="toggle">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="askQuestion"
+                onchange="disableMetadataSelections('form-group-input')" checked>
+              <label class="form-check-label" for="askQuestion">
+                Poser une question ?
+              </label>
+
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="selectMetadata"
+                onchange="disableQuestionBox()">
+              <label class="form-check-label" for="selectMetadata">
+                Selectionner des filtres
+              </label>
+
+              <div id="flap">
+                <span class="content">Poser une question ?</span>
+              </div>
+            </div>
+
+            <form action="#" id="formId">
+              
+                <div class="form-group">              
+                    <label>Rechercher dans Insight Advisor</label>
+                    <div id="form-group-input">
+                      <input type="text" class="form-control recherche" id="inputText" placeholder="Posez votre question ici">
+                    </div>
+                </div>
+                <div class="form-group" id="form-group-selected">
+                  <select class="selected" id="selectMeasure">
+                    <optgroup label="Fields" id="fieldMeasures">
+                      <option>Select Measure</option>
+                    </optgroup>
+                    <optgroup label="Master Items" id="masterMeasures">
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="selected" id="selectDimension">
+                    <optgroup label="Fields" id="fieldDimensions">
+                      <option>Select Dimension</option>
+                    </optgroup>
+                    <optgroup label="Master Items" id="masterDimensions">
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="selected" id="selectAnalysis">
+                    <option value="rank-rank">Select Analysis</option>
+                  </select>
+                </div>
+          
+              <div class="form-group">
+                <button type="submit" class="button" id="button">Rechercher</button>
+              </div>
+            </form>
+
+            <div class="text">
+              Vous pouvez utiliser l'intelligence Artificiel de Qlik en ajoutant <a href="https://www.qlik.com/us/products/qlik-sense/conversational-analytics">Qlik Insight Advisor</a> dans un mashup.<br/>
+              Pour rappel, Insight Advisor est un <a href="https://www.qlik.com/us/products/qlik-sense/ai">composant IA</a> développer par Qlik et offre une valeur ajouter à votre Analytics.
+            </div>   
+
+            <div id="app">
+              <div id="selection" class="curr-selections"></div>
+              <div id="chart-advisor"></div>
+            </div>
+            
+          </div>
+
+      </div>
+      <a href="#parallax_6">
+        <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+          <div class="scroll-prompt-arrow-container">
+              <div class="scroll-prompt-arrow"><div></div></div>
+              <div class="scroll-prompt-arrow"><div></div></div>
+          </div>
+        </div>
+      </a>      
+    </div>
+
+    <div class="parallax_6" id="parallax_6">
+      <div class="parallax-inner_6">
+        <div class="speedy"></div>
+
+        <div class="text">
+          Créer des mashup comme Speedy !!!
+        </div>   
+        <div class="text-option">
+          Retrouver tous les outils pour développer des mashup rapidement.
+          <ul>
+            <li>Le <a href="https://help.qlik.com/en-US/sense-developer/November2023/Subsystems/Dev-Hub/Content/Sense_Dev-Hub/dev-hub-launch-dev-hub.htm">Dev Hub</a> pour les utilisateurs de Qlik Sense Client Manage</li>
+            <li>L'<a href="https://qlik.dev/embed/capability-api/">API Capability</a> vous permet de jouer avec les objets, le moteur associatif, les bookmarks, les feuilles avec facilité.</li>
+            <li>Le framework <a href="https://qlik.dev/embed/nebula/">Enigma.js</a> ou <a href="https://qlik.dev/extend/set-up-nebula-environment/">Nebula.js</a> conçu par Qlik pour accélérer vos développements.</li>
+            <li>Le <a href="https://qlik.dev">site d'aide de Qlik</a> pour les développeurs</li>
+          </ul>
+        </div>            
+      </div>  
+    </div>
+
+  </div>
+
+</body>
+
+</html>
